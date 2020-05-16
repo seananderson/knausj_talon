@@ -3,7 +3,7 @@ from typing import Set
 from talon import Module, Context, actions
 import sys
     
-default_alphabet = 'air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip'.split(' ')
+default_alphabet = 'air bat cop drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip'.split(' ')
 letters_string = 'abcdefghijklmnopqrstuvwxyz'
 
 default_digits = 'zero one two three four five six seven eight nine'.split(' ')
@@ -79,8 +79,8 @@ ctx.lists['self.symbol'] = {
     'dot': '.', 'period': '.',
     'semi': ';', 'semicolon': ';',
     'quote': "'",
-    'L square': '[', 'left square': '[', 'square': '[',
-    'R square': ']', 'right square': ']',
+    'lack': '[',
+    'rack': ']',
     'forward slash': '/', 'slash': '/',
     'backslash': '\\',
     'minus': '-', 'dash': '-',
@@ -94,9 +94,9 @@ ctx.lists['self.symbol'] = {
     'colon': ':',
     'paren': '(', 'L paren': '(', 'left paren': '(',
     'R paren': ')', 'right paren': ')',
-    'brace': '{', 'left brace': '{',
+    'race': '{', 'lace': '{',
     'R brace': '}', 'right brace': '}',
-    'angle': '<', 'left angle': '<', 'less than': '<',
+    'langle': '<', 'left angle': '<', 'less than': '<',
     'rangle': '>', 'R angle': '>', 'right angle': '>', 'greater than': '>',
     'star': '*', 'asterisk': '*',
     'pound': '#', 'hash': '#', 'hash sign': '#', 'number sign': '#',
@@ -123,9 +123,9 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    'delete': 'backspace', 
+    'chuck': 'backspace', 
     #'junk': 'backspace',
-    'forward delete': 'delete',
+    'delete': 'delete',
 }
 keys = {k: k for k in simple_keys}
 keys.update(alternate_keys)

@@ -1,0 +1,77 @@
+app: RStudio
+app: iTerm2
+-
+
+dee plier: "dplyr"
+dee plier colon: "dplyr::"
+dee plier filter: "dplyr::filter("
+word filter: "filter("
+dee plier (group | grouped) by: "group_by("
+dee plier ungroup: "ungroup("
+dee plier inner (join | joint): "inner_join("
+dee plier left (join | joint): "left_join("
+dee plier bind (rows | rose): "bind_rows("
+
+word tidier: "tidyr"
+word tidier colon: "tidyr::"
+score pivot longer: "tidyr::pivot_longer("
+score pivot wider: "tidyr::pivot_wider("
+
+word lubra date: "lubridate::"
+year month date: "lubridate::ymd("
+
+per: "purrr"
+per colon: "purrr::"
+per map: "purrr::map("
+per map data frame: "purrr::map_dfr("
+per map character: "purrr::map_chr("
+per map double: "purrr::map_dbl("
+per p map data frame: "purrr::pmap_dfr("
+per p map: "purrr::pmap("
+
+word tidy bayes: "tidybayes"
+word tidy bayes colon: "tidybayes::"
+
+word fur colon: "furrr::"
+score future map: "furrr::future_map("
+score per set names: "purrr::set_names("
+plan multi session: "future::plan(future::multisession, workers = future::availableCores())"
+
+g g plot: "ggplot"
+g g plot 2: "ggplot2"
+geom point: "geom_point("
+geom line: "geom_line("
+geom ribbon: "geom_ribbon("
+geom point: "geom_point("
+geom segment: "geom_segment("
+geom histogram: "geom_histogram("
+geom bar: "geom_bar("
+geom area: "geom_area("
+geom violin: "geom_violin("
+geom boxplot: "geom_boxplot("
+geom pointrange: "geom_pointrange("
+geom polygon: "geom_polygon("
+geom A B line: "geom_abline("
+geom horizontal line: "geom_hline("
+geom vertical line: "geom_vline("
+facet wrap: "facet_wrap("
+facet grid: "facet_grid("
+scale colour vera is: "scale_colour_viridis_c("
+theme set: "theme_set("
+element blank: "element_blank("
+coord cartesian: "coord_cartesian("
+zero coord cartesian: "coord_cartesian(expand = FALSE, ylim = c(0, NA))"
+
+stan parallel processing: "options(mc.cores = parallel::detectCores() / 2) # Stan parallel processing"
+
+score sequence along: "seq_along("
+score sequence length: "seq_len("
+uppercase true: "TRUE"
+true: "TRUE"
+uppercase false: "FALSE"
+false: "FALSE"
+
+theme sleek: "ggsidekick::theme_sleek("
+word covid seer: "covidseir"
+word seer: "seir"
+

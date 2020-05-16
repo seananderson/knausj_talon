@@ -106,6 +106,7 @@ formatters_words = {
     "hammer": formatters_dict["PUBLIC_CAMEL_CASE"],
     "snake": formatters_dict["SNAKE_CASE"],
     "smash": formatters_dict["NO_SPACES"],
+    "jumble": formatters_dict["NO_SPACES"],
     "kebab": formatters_dict["DASH_SEPARATED"],
     "packed": formatters_dict["DOUBLE_COLON_SEPARATED"],
     "allcaps": formatters_dict["ALL_CAPS"],
@@ -115,11 +116,11 @@ formatters_words = {
     "padded": formatters_dict["SPACE_SURROUNDED_STRING"],
     "dotted": formatters_dict["DOT_SEPARATED"],
     "slasher": formatters_dict["SLASH_SEPARATED"],
-    "sentence": formatters_dict["CAPITALIZE_FIRST_WORD"],
+    "cap": formatters_dict["CAPITALIZE_FIRST_WORD"],
     "title": formatters_dict["CAPITALIZE_ALL_WORDS"],
     #disable a few formatters for now
-    #"tree": formatters_dict["FIRST_THREE"],
-    #"quad": formatters_dict["FIRST_FOUR"],
+    "thrack": formatters_dict["FIRST_THREE"],
+    "quatro": formatters_dict["FIRST_FOUR"],
     #"fiver": formatters_dict["FIRST_FIVE"],
 }
 
