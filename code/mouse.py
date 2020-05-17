@@ -49,10 +49,11 @@ ctx = Context()
 ctx.lists['self.mouse_button'] = {
      #right click
      'righty':  '1',
-     'rickle': '1',
+     'right click':  '1',
+     #'rickle': '1',
      
      #left click
-     'chiff': '0',
+     'left click': '0',
 }
 
 continuous_scoll_mode = ""
