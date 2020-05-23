@@ -3,6 +3,9 @@ app: cmd.exe
 app: iTerm2
 app: Terminal
 app: Windows Command Processor
+app: Code
+app: Visual Studio Code
+app: Code.exe
 -
 git add patch: "git add . -p\n"
 git add: "git add "
@@ -39,7 +42,7 @@ git rebase: "git rebase\n"
 git rebase continue: "git rebase --continue"
 git rebase skip: "git rebase --skip"
 git remove: "git rm "
-git reset: "git rese "
+git reset: "git reset "
 git reset soft: "git reset --soft "
 git reset hard: "git reset --hard "
 git show: "git show "
