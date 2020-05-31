@@ -3,7 +3,6 @@ from talon.engine import engine
 from talon_plugins import speech, eye_mouse, eye_zoom_mouse
 import platform
 import subprocess
-import ctypes
 import os
 import pathlib
 
@@ -170,6 +169,7 @@ def show_cursor_helper(show):
     """Show/hide the cursor"""
     if "Windows-10" in platform.platform(terse=True):
         import winreg, win32con
+        import ctypes
 
         try:
             Registrykey = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Control Panel\Cursors", 0, winreg.KEY_WRITE)
@@ -262,4 +262,3 @@ def start_cursor_scrolling():
 @ctx.capture(rule='{self.mouse_button}')
 def mouse_index(m) -> int:
     return int(m.mouse_button)
-    
