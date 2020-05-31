@@ -1,6 +1,7 @@
 slap:
-	edit.line_end()
+	#edit.line_end()
 	key(enter)
+slop: key(enter)
 cd: "cd "
 grep: "grep "
 elle less: "ls "
