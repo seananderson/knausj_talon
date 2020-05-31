@@ -8,6 +8,12 @@ simple_vocabulary = [
     "VPN",
     "DNS",
     "minecraft",
+    "coronavirus",
+    "indices",
+    "aesthetic",
+    "aesthetics",
+    "kill",
+    "Bayesian", 
 ]
 
 mapping_vocabulary = {
@@ -16,6 +22,9 @@ mapping_vocabulary = {
     "i've": "I've",
     "i'll": "I'll",
     "i'd": "I'd",
+    "g g plot": "ggplot",
+    "passion": "Bayesian",
+    "Passion": "Bayesian",
 }
 
 mapping_vocabulary.update(dict(zip(simple_vocabulary, simple_vocabulary)))
