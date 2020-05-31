@@ -67,7 +67,7 @@ ctx = Context()
 ctx.lists['self.modifier'] = {
     'command': 'cmd',
     'control': 'ctrl',   #'troll':   'ctrl',
-    'shift':   'shift',  #'sky':     'shift',
+    'shift':   'shift',  'sky':     'shift',
     'alt':     'alt',    'option':  'alt',
     'super':   'super',
 }
@@ -125,7 +125,7 @@ simple_keys = [
 alternate_keys = {
     'chuck': 'backspace', 
     #'junk': 'backspace',
-    'delete': 'delete',
+    'kill': 'delete'
 }
 keys = {k: k for k in simple_keys}
 keys.update(alternate_keys)
