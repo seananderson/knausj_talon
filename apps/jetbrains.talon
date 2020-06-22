@@ -5,10 +5,9 @@ app: /jetbrains/
 app: IntelliJ IDEA
 app: PyCharm
 app: PyCharm64.exe
-# When tags are supported
-#tags: ide
 -
-
+tag(): ide
+tag(): tabs
 # Auto complete
 action(code.complete): user.idea("action CodeCompletion")
 action(user.ide_perfect): user.idea("action CodeCompletion,action CodeCompletion")
