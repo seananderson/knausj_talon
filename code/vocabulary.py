@@ -13,7 +13,10 @@ simple_vocabulary = [
     "aesthetic",
     "aesthetics",
     "kill",
-    "Bayesian", 
+    "Bayesian",
+    "ensemble",
+    "spatial",
+    "data",
 ]
 
 mapping_vocabulary = {
