@@ -17,3 +17,6 @@ dot: key(backspace . space)
 ^escape <phrase>$:
     dictate(phrase)
     insert(" ")
+
+(cap | tap) <user.text>:
+    insert(user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD"))
