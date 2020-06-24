@@ -17,6 +17,8 @@ simple_vocabulary = [
     "ensemble",
     "spatial",
     "data",
+    "spatial",
+    "spatiotemporal",
 ]
 
 mapping_vocabulary = {
