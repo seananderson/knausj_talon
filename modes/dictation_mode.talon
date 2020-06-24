@@ -20,3 +20,4 @@ dot: key(backspace . space)
 
 (cap | tap) <user.text>:
     insert(user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD"))
+    insert(" ")
