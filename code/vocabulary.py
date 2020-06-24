@@ -18,6 +18,7 @@ simple_vocabulary = [
     "spatial",
     "data",
     "spatial",
+    "spatially",
     "spatiotemporal",
 ]
 
@@ -30,6 +31,7 @@ mapping_vocabulary = {
     "g g plot": "ggplot",
     "passion": "Bayesian",
     "Passion": "Bayesian",
+    "submision": "submission",
 }
 
 mapping_vocabulary.update(dict(zip(simple_vocabulary, simple_vocabulary)))
