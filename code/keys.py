@@ -108,7 +108,7 @@ ctx.lists['self.symbol'] = {
     'dubquote': '"', 'double quote': '"',
 }
 
-# ctx.lists['self.number'] = dict(zip(default_digits, numbers))
+ctx.lists['self.number'] = dict(zip(default_digits, numbers))
 ctx.lists['self.arrow'] = {
     'left':  'left',
     'right': 'right',
