@@ -1,7 +1,7 @@
 mode: dictation
 -
 <user.text>:
-    insert(user.text)
+    insert(user.formatted_text(user.text, "NOOP"))
     insert(" ")
 enter: key(enter)
 period: key(backspace . space)
