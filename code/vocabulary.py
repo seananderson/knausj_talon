@@ -1,18 +1,14 @@
 from talon import Context, Module
 
 simple_vocabulary = [
-    "nmap",
     "admin",
-    "Cisco",
-    "Citrix",
     "VPN",
     "DNS",
-    "minecraft",
     "coronavirus",
+    "COVID-19",
     "indices",
     "aesthetic",
     "aesthetics",
-    "kill",
     "Bayesian",
     "ensemble",
     "spatial",
@@ -20,6 +16,9 @@ simple_vocabulary = [
     "spatial",
     "spatially",
     "spatiotemporal",
+    "ss3sim",
+    "SFU",
+    "UBC"
 ]
 
 mapping_vocabulary = {
@@ -32,6 +31,14 @@ mapping_vocabulary = {
     "passion": "Bayesian",
     "Passion": "Bayesian",
     "submision": "submission",
+    "doctor anderson": "Dr. Anderson",
+    "doctor anderson's": "Dr. Anderson's",
+    "assess three sim": "ss3sim",
+    "as as three sim": "ss3sim",
+    "specially": "spatially",
+    "S S three sim": "ss3sim",
+    "U B C": "UBC",
+    "S F U": "SFU",
 }
 
 mapping_vocabulary.update(dict(zip(simple_vocabulary, simple_vocabulary)))
