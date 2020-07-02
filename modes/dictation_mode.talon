@@ -18,6 +18,6 @@ slap: key(enter)
     dictate(phrase)
     insert(" ")
 
-(cap | tap | cop | top) <user.text>:
+^cap <user.text>:
     insert(user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD"))
     insert(" ")
