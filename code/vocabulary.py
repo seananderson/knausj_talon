@@ -18,7 +18,8 @@ simple_vocabulary = [
     "spatiotemporal",
     "ss3sim",
     "SFU",
-    "UBC"
+    "UBC",
+    "superensembles",
 ]
 
 mapping_vocabulary = {
@@ -39,6 +40,7 @@ mapping_vocabulary = {
     "S S three sim": "ss3sim",
     "U B C": "UBC",
     "S F U": "SFU",
+    "super ensembles": "superensembles",
 }
 
 mapping_vocabulary.update(dict(zip(simple_vocabulary, simple_vocabulary)))
