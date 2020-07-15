@@ -6,6 +6,7 @@ ctx = Context()
 key = actions.key
 
 words_to_keep_lowercase = "a,an,the,at,by,for,in,is,of,on,to,up,and,as,but,or,nor".split(",")
+words_to_capitalize = "i,i've,i'm,i'd,i'll".split(",")
 
 last_formatted_phrase = ""
 last_phrase = ""
@@ -86,7 +87,7 @@ def every_word(word_func):
     return formatter_function
 
 formatters_dict = {
-    "NOOP": (SEP, lambda i, word, _: word),
+    "NOOP": (SEP, lambda i, word, _:  word.capitalize() if word in words_to_capitalize else word),
     "DOUBLE_UNDERSCORE": (NOSEP, first_vs_rest(lambda w: "__%s__" % w)),
     "PRIVATE_CAMEL_CASE": (NOSEP, first_vs_rest(lambda w: w, lambda w: w.capitalize())),
     "PROTECTED_CAMEL_CASE": (NOSEP, first_vs_rest(lambda w: w, lambda w: w.capitalize())),
