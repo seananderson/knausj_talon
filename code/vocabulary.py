@@ -20,6 +20,7 @@ simple_vocabulary = [
     "SFU",
     "UBC",
     "superensembles",
+    "DFO",
 ]
 
 mapping_vocabulary = {
@@ -41,6 +42,7 @@ mapping_vocabulary = {
     "U B C": "UBC",
     "S F U": "SFU",
     "super ensembles": "superensembles",
+    "css down": "csasdown",
 }
 
 mapping_vocabulary.update(dict(zip(simple_vocabulary, simple_vocabulary)))
