@@ -1,23 +1,20 @@
 mode: dictation
 -
-<user.text>:
-    insert(user.formatted_text(user.text, "NOOP"))
-    insert(" ")
-enter: key(enter)
-period: key(backspace . space)
-colon: key(backspace : space)
-semicolon: key(backspace ; space)
-comma: key(backspace , space)
-question [mark]: key(backspace ? space)
-(bang | exclamation mark): key(backspace ! space)
-
-slap: key(enter)
+#everything here should call user.dictate to preserve the state to correctly auto-capitalize.
+<user.text>: user.dictate(text)
+enter: user.dictate("new-line")
+period: user.dictate(".")
+comma: user.dictate(",")
+question [mark]: user.dictate("?")
+(bang | exclamation [mark]): user.dictate("!")
+dash: user.dictate("-")
+colon: user.dictate(":")
+semi colon: user.dictate(";")
+cap <user.text>: 
+    result = user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD")
+    user.dictate(result)
 
 # dictate phrases that would otherwise be commands; e.g. 'escape comma'
 ^escape <phrase>$:
     dictate(phrase)
-    insert(" ")
-
-cap <user.text>:
-    insert(user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD"))
     insert(" ")
