@@ -4,7 +4,7 @@ settings():
 	#enable pop click with 'control mouse' mode
 	user.mouse_enable_pop_click = 1
 	#hide cursor when mouse_wake is called to enable zoom mouse
-	user.mouse_wake_hides_cursor = 1
+	user.mouse_wake_hides_cursor = 0
 control mouse: user.mouse_toggle_control_mouse()
 zoom mouse: user.mouse_toggle_zoom_mouse()
 camera overlay: eye_mouse.camera_overlay.toggle()
