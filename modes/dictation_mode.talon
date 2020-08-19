@@ -9,6 +9,7 @@ question [mark]: user.dictate("?")
 (bang | exclamation [mark]): user.dictate("!")
 dash: user.dictate("-")
 colon: user.dictate(":")
+space: user.dictate(" ")
 semi colon: user.dictate(";")
 cap <user.text>: 
     result = user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD")
@@ -16,5 +17,4 @@ cap <user.text>:
 
 # dictate phrases that would otherwise be commands; e.g. 'escape comma'
 ^escape <phrase>$:
-    dictate(phrase)
-    insert(" ")
+    user.dictate(phrase)
