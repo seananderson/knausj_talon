@@ -2,11 +2,14 @@ mode: dictation
 -
 #everything here should call user.dictate to preserve the state to correctly auto-capitalize.
 <user.text>: user.dictate(text)
-enter: user.dictate("new-line")
+(enter|slap): user.dictate("new-line")
+^new paragraph$: 
+	user.dictate("new-line")
+	user.dictate("new-line")
 period: user.dictate(".")
 comma: user.dictate(",")
-question [mark]: user.dictate("?")
-(bang | exclamation [mark]): user.dictate("!")
+question mark: user.dictate("?")
+(bang | exclamation mark): user.dictate("!")
 dash: user.dictate("-")
 colon: user.dictate(":")
 space: user.dictate(" ")
