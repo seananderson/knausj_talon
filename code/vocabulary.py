@@ -22,6 +22,7 @@ simple_vocabulary = [
     "UBC",
     "superensembles",
     "DFO",
+    "layout",
 ]
 
 mapping_vocabulary = {
