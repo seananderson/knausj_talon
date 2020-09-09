@@ -65,6 +65,9 @@ simple_vocabulary = ["nmap", "admin", "Cisco", "Citrix", "VPN", "DNS", "minecraf
     "superensembles",
     "DFO",
     "layout",
+    "diversification",
+    "black swan",
+    "black swans",
 ]
 
 # Add vocabulary words (or phrases you want treated as words) here that aren't
@@ -87,6 +90,8 @@ mapping_vocabulary = {
     "S F U": "SFU",
     "super ensembles": "superensembles",
     "css down": "csasdown",
+    "black swan events": "black-swan events",
+    "closed loop simulations": "closed-loop simulations",
 }
 mapping_vocabulary.update(dict(zip(simple_vocabulary, simple_vocabulary)))
 
