@@ -60,7 +60,7 @@ action(user.code_true): "TRUE"
 action(user.code_false): "FALSE"
 
 # R specific commands
-chain:
+(chain|pipe that|and then):
     key(end)
     " %>%"
     key(enter)
