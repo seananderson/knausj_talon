@@ -10,7 +10,6 @@ and code.language: r
 
 ctx.lists["user.code_functions"] = {
     # base R
-    "M table": "mtable",
     "as character": "as.character",
     "as data frame": "as.data.frame",
     "as date": "as.Date",
