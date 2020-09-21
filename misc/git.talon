@@ -1,4 +1,5 @@
-tag: terminal
+app: /.*terminal/
+app: /.*term/
 -
 # Standard commands
 git add patch: "git add . -p\n"
