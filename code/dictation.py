@@ -65,8 +65,8 @@ class AutoFormat:
             elif self.space:
                 result += " "
 
-            if self.caps:
-                word = word.capitalize()
+            # if self.caps:
+            #     word = word.capitalize()
 
             result += word
             self.space = "\n" not in word and word[-1] not in no_space_after_these
