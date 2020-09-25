@@ -64,6 +64,10 @@ formatted <user.format_text>:
     user.auto_format_pause()
     auto_insert(format_text)
     user.auto_format_resume()
+^formatting pause$:
+    user.auto_format_pause()
+^formatting resume$:
+    user.auto_format_resume()
 ^format selection <user.formatters>$:
     edit.copy()
     sleep(100ms)
