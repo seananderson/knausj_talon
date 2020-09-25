@@ -73,9 +73,9 @@ formatted <user.format_text>:
     auto_insert(result)
     user.auto_format_resume()
 #corrections
-scratch that: user.clear_last_utterance()
+(scratch that|scratch a bat|scratch thought): user.clear_last_utterance()
 scratch selection: edit.delete()
-select that: user.select_last_utterance()
+(select that|select thought): user.select_last_utterance()
 spell that <user.formatters> <user.letters>:
     result = dictate.join_words(user.letters, "")
     result = user.formatted_text(result, formatters)
