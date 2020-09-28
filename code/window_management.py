@@ -1,5 +1,6 @@
 from talon import ui, tap
-from talon.voice import Context
+from talon import Context
+
 
 """Provides a voice-driven window management application implemented in Talon.
 
