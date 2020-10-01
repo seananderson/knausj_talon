@@ -41,6 +41,7 @@ capitalize = [
 word_map = {
     # For example:
     # "color": "colour",
+    "thee": "the",
 }
 word_map.update({x.lower(): x for x in capitalize})
 
