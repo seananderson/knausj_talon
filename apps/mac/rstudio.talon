@@ -125,3 +125,25 @@ run git commit:                  key("ctrl-alt-m")
 # insert code section:           key("cmd-shift-r")
 # scroll diff view:              key("ctrl-up/down")
 # sync editor & pdf preview:     key("cmd-f8")
+
+style active file:
+  key("ctrl-2")
+  key("escape")
+  insert("styler:::style_active_file()\n")
+  sleep(100ms)
+  key("ctrl-1")
+
+style selection:
+  key("ctrl-2")
+  key("escape")
+  insert("styler:::style_selection()\n")
+  sleep(100ms)
+  key("ctrl-1")
+
+open finder here:
+  key("ctrl-2")
+  key("escape")
+  insert("system('open .')\n")
+
+score load all:
+  insert('load_all("')
