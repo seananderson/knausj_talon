@@ -10,8 +10,7 @@ question mark: auto_insert("?")
 (bang | exclamation [mark]): auto_insert("!")
 dash: auto_insert("-")
 colon: auto_insert(":")
-# user.dictate no longer exists, so I'm not sure what this was supposed to do.
-#space: user.dictate(" ")
+space: insert(" ")
 (semi colon | semicolon): auto_insert(";")
 cap <user.text>: 
     result = user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD")
@@ -61,6 +60,10 @@ clear right <number_small> characters:
     repeat(number_small - 1)
     edit.delete()
 #formatting 
+say <user.text>:
+    user.auto_format_pause()
+    auto_insert(text)
+    user.auto_format_resume()
 formatted <user.format_text>:
     user.auto_format_pause()
     auto_insert(format_text)
