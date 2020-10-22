@@ -162,7 +162,7 @@ formatters_words = {
     "jive": formatters_dict["DASH_SEPARATED"],
     "smash": formatters_dict["DOUBLE_COLON_SEPARATED"],
     "padded": formatters_dict["SPACE_SURROUNDED_STRING"],
-    "say": formatters_dict["NOOP"],
+    # "say": formatters_dict["NOOP"],
     "cap": formatters_dict["CAPITALIZE_FIRST_WORD"],
     "slasher": formatters_dict["SLASH_SEPARATED"],
     "smash": formatters_dict["NO_SPACES"],
