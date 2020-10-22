@@ -95,8 +95,8 @@ wheel tiny right: mouse_scroll(0, 20)
 wheel tiny right here:
     user.mouse_move_center_active_window()
     mouse_scroll(0, 20)
-curse yes: user.mouse_show_cursor()
-curse no: user.mouse_hide_cursor()
+(curse yes|show cursor): user.mouse_show_cursor()
+(curse no|hide cursor): user.mouse_hide_cursor()
 drag: user.mouse_drag()
 
 copy mouse position: user.copy_mouse_position()
