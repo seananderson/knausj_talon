@@ -151,15 +151,25 @@ app: jetbrains
 """
 
 
+@ctx.action_class("win")
+class win_actions:
+    def file_ext():
+        return actions.win.title().split(".")[-1]
+
+
 @ctx.action_class("edit")
 class edit_actions:
     def jump_line(n: int):
         actions.user.idea("goto {} 0".format(n))
+        # move the cursor to the first nonwhite space character of the line
+        actions.user.idea("action EditorLineEnd")
+        actions.user.idea("action EditorLineStart")
 
 
 @ctx.action_class("user")
 class user_actions:
     def tab_jump(number: int):
+        # depends on plugin GoToTabs
         if number < 10:
             actions.user.idea("action GoToTab{}".format(number))
 
@@ -167,7 +177,12 @@ class user_actions:
         actions.user.idea("extend {}".format(line))
 
     def select_range(line_start: int, line_end: int):
-        actions.user.idea("range {} {}".format(line_start, line_end))
+        # if it's a single line, select the entire thing including the ending new-line5
+        if line_start == line_end:
+            actions.user.idea("goto {} 0".format(line_start))
+            actions.user.idea("action EditorSelectLine"),
+        else:
+            actions.user.idea("range {} {}".format(line_start, line_end))
 
     def extend_camel_left():
         actions.user.idea("action EditorPreviousWordInDifferentHumpsModeWithSelection")

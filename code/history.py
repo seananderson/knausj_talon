@@ -24,11 +24,8 @@ def on_phrase(j):
         history.append(val)
         history = history[-hist_len:]
 
-        if gui.showing:
-            gui.freeze()
-
-#todo: dynamic rect?
-@imgui.open(x=25,y=22,software=True)
+# todo: dynamic rect?
+@imgui.open(x=25, y=0, software=False)
 def gui(gui: imgui.GUI):
     global history
     gui.text("Command History")
@@ -54,7 +51,7 @@ class Actions:
 
     def history_enable():
         """Enables the history"""
-        gui.freeze()
+        gui.show()
 
     def history_disable():
         """Disables the history"""
