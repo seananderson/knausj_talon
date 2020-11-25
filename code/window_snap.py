@@ -168,10 +168,11 @@ _snap_positions = {
     "bottom right two thirds": RelativeScreenPos(1 / 3, 0.5, 1, 1),
     "bottom center third": RelativeScreenPos(1 / 3, 0.5, 2 / 3, 1),
     # Special
-    "center": RelativeScreenPos(1 / 8, 1 / 6, 7 / 8, 5 / 6),
-    "full": RelativeScreenPos(0, 0, 1, 1),
+    # "center": RelativeScreenPos(1 / 8, 1 / 6, 7 / 8, 5 / 6),
+    # "full": RelativeScreenPos(0, 0, 1, 1),
     "fullscreen": RelativeScreenPos(0, 0, 1, 1),
-    "half center": RelativeScreenPos(0.25, 0, 0.75, 1),
+    "center half": RelativeScreenPos(0.25, 0, 0.75, 1),
+    "center two thirds": RelativeScreenPos(0.166, 0, 0.833, 1),
 }
 
 
