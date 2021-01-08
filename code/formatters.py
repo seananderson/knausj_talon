@@ -1,4 +1,4 @@
-from talon import Module, Context, actions, ui, imgui
+from talon import Module, Context, actions, ui, imgui, app
 from talon.grammar import Phrase
 from typing import List, Union
 import re
@@ -163,7 +163,7 @@ formatters_words = {
     "smash": formatters_dict["DOUBLE_COLON_SEPARATED"],
     "padded": formatters_dict["SPACE_SURROUNDED_STRING"],
     # "say": formatters_dict["NOOP"],
-    "cap": formatters_dict["CAPITALIZE_FIRST_WORD"],
+    # "sentence": formatters_dict["CAPITALIZE_FIRST_WORD"],
     "slasher": formatters_dict["SLASH_SEPARATED"],
     "smash": formatters_dict["NO_SPACES"],
     "score": formatters_dict["SNAKE_CASE"],
@@ -182,13 +182,13 @@ all_formatters.update(formatters_words)
 
 mod = Module()
 mod.list("formatters", desc="list of formatters")
+mod.list("prose_formatter", desc="words to start dictating prose, and the formatter they apply")
 
 
 @mod.capture(rule="{self.formatters}+")
 def formatters(m) -> str:
     "Returns a comma-separated string of formatters e.g. 'SNAKE,DUBSTRING'"
     return ",".join(m.formatters_list)
-
 
 @mod.capture(
     # Note that if the user speaks something like "snake dot", it will
@@ -218,7 +218,7 @@ class ImmuneString(object):
 @mod.capture(
     # Add anything else into this that you want to be able to speak during a
     # formatter.
-    rule="(<user.symbol_key> | <user.letter> | numb <number>)"
+    rule="(<user.symbol_key> | numb <number>)"
 )
 def formatter_immune(m) -> ImmuneString:
     """Text that can be interspersed into a formatter, e.g. characters.
@@ -294,9 +294,13 @@ class Actions:
 
 
 ctx.lists["self.formatters"] = formatters_words.keys()
+ctx.lists["self.prose_formatter"] = {
+    "say": "NOOP", "speak": "NOOP",
+    "sentence": "CAPITALIZE_FIRST_WORD",
+}
 
 
-@imgui.open(software=False)
+@imgui.open(software=app.platform == "linux")
 def gui(gui: imgui.GUI):
     gui.text("List formatters")
     gui.line()
@@ -304,7 +308,7 @@ def gui(gui: imgui.GUI):
         gui.text(f"{name} | {format_phrase_no_history(['one', 'two', 'three'], name)}")
 
 
-@imgui.open(software=False)
+@imgui.open(software=app.platform == "linux")
 def recent_gui(gui: imgui.GUI):
     gui.text("Recent formatters")
     gui.line()

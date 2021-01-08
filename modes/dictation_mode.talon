@@ -3,16 +3,8 @@ mode: dictation
 #everything here should call auto_insert to preserve the state to correctly auto-capitalize/auto-space.
 <user.text>: auto_insert(text)
 enter: auto_insert("new-line")
-period: auto_insert(".")
-(comma | kama): 
-    auto_insert(",")
-question mark: auto_insert("?")
-(bang | exclamation [mark]): auto_insert("!")
-dash: auto_insert("-")
-colon: auto_insert(":")
-space: insert(" ")
-(semi colon | semicolon): auto_insert(";")
-cap <user.text>: 
+{user.punctuation}: auto_insert(punctuation)
+cap <user.text>:
     result = user.formatted_text(user.text, "CAPITALIZE_FIRST_WORD")
     auto_insert(result)
 #navigation
