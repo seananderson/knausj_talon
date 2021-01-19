@@ -22,8 +22,13 @@ settings():
     user.mouse_wheel_down_amount = 120
     speech.record_all = 1
     # (unstable) minimum silence time (in seconds) before speech is cut off, default 0.150
-    speech.timeout = 0.250
+    # speech.timeout = 0.250
 
+    # the number of lines of command history to display by default
+    user.command_history_display = 10
+    # the number of lines of command history to keep in total;
+    # "command history more" to display all of them, "command history less" to restore
+    user.command_history_size = 50
 	
 # uncomment tag to enable mouse grid
 # tag(): user.mouse_grid_enabled
