@@ -71,4 +71,6 @@ pipe that:
 state na:
     insert("NA")
 
+op equals: " = "
+
 ^function define <user.text>$: user.code_private_function(text)
